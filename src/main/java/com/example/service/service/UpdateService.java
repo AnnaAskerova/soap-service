@@ -7,8 +7,6 @@ import javax.jws.WebService;
 
 @WebService
 public interface UpdateService {
-
     @WebMethod
     GetPatchResponse getPatch();
-
 }

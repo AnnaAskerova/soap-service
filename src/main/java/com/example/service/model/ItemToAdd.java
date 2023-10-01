@@ -4,24 +4,14 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "items")
-public class ItemModel {
+@Table(name = "items_to_add")
+public class ItemToAdd {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
-
-    public ItemModel(String name) {
-        this.name = name;
-    }
-
-    public ItemModel(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public ItemModel() {
-    }
+    @OneToOne
+    @JoinColumn(name = "item_id")
+    private ItemModel item;
 
     public long getId() {
         return id;
@@ -31,24 +21,32 @@ public class ItemModel {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public ItemModel getItem() {
+        return item;
     }
 
-    public void setName(String value) {
-        this.name = value;
+    public void setItem(ItemModel item) {
+        this.item = item;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ItemModel itemModel = (ItemModel) o;
-        return id == itemModel.id;
+        ItemToAdd itemToAdd = (ItemToAdd) o;
+        return id == itemToAdd.id;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "ItemToAdd{" +
+                "id=" + id +
+                ", item=" + item +
+                '}';
     }
 }

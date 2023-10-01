@@ -4,24 +4,12 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "items")
-public class ItemModel {
+@Table(name = "items_to_delete")
+public class ItemToDelete {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
-
-    public ItemModel(String name) {
-        this.name = name;
-    }
-
-    public ItemModel(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public ItemModel() {
-    }
+    private long itemId;
 
     public long getId() {
         return id;
@@ -31,20 +19,20 @@ public class ItemModel {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public long getItemId() {
+        return itemId;
     }
 
-    public void setName(String value) {
-        this.name = value;
+    public void setItemId(long itemId) {
+        this.itemId = itemId;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ItemModel itemModel = (ItemModel) o;
-        return id == itemModel.id;
+        ItemToDelete that = (ItemToDelete) o;
+        return id == that.id;
     }
 
     @Override

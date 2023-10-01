@@ -1,12 +1,11 @@
 package com.example.service.service;
 
+import com.example.service.model.ItemModel;
+
 public interface DataService {
+    void addItem(ItemModel itemModel);
 
-    void addEntry(Long key, String value);
+    void removeItem(Long id);
 
-
-    void removeEntry(Long key);
-
-
-    void updateEntry(Long key, String value);
+    void updateItem(ItemModel itemModel);
 }

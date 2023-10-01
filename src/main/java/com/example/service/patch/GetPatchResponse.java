@@ -108,4 +108,11 @@ public class GetPatchResponse {
         return this.toAdd;
     }
 
+    public void setToDelete(List<Long> toDelete) {
+        this.toDelete = toDelete;
+    }
+
+    public void setToAdd(List<Item> toAdd) {
+        this.toAdd = toAdd;
+    }
 }
