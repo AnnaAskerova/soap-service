@@ -1,4 +1,4 @@
-package com.example.service.service;
+package com.example.service.dataservice;
 
 import com.example.service.model.ItemModel;
 import com.example.service.model.ItemToAdd;
