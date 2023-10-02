@@ -59,6 +59,10 @@ public class DataServiceImpl implements DataService {
 
     @Override
     public void updateItem(ItemModel itemModel) {
-        itemRepository.save(itemModel);
+        if (toAddRepository.existsById(itemModel.getId())) {
+            itemRepository.save(itemModel);
+        } else {
+            addItem(itemModel);
+        }
     }
 }

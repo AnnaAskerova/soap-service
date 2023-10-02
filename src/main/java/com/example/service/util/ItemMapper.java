@@ -2,7 +2,7 @@ package com.example.service.util;
 
 import com.example.service.model.ItemModel;
 import com.example.service.model.ItemToAdd;
-import com.example.service.patch.Item;
+import com.example.service.service.Item;
 import org.springframework.stereotype.Component;
 
 @Component

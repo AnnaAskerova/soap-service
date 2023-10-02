@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:tns="http://service.example.com/patch"
-           targetNamespace="http://service.example.com/patch"
+           xmlns:tns="http://service.service.example.com/"
+           targetNamespace="http://service.service.example.com/"
            elementFormDefault="qualified" >
 
     <xs:element name="getPatchResponse">

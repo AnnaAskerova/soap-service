@@ -2,7 +2,6 @@ package com.example.service.service;
 
 import com.example.service.model.ItemToAdd;
 import com.example.service.model.ItemToDelete;
-import com.example.service.patch.GetPatchResponse;
 import com.example.service.repository.ItemToAddRepository;
 import com.example.service.repository.ItemToDeleteRepository;
 import com.example.service.util.ItemMapper;
